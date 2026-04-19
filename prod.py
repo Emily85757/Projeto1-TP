@@ -12,3 +12,5 @@ class Produtorio:
         if self._quantos == 0:
             return 0
         return self._produto ** (1 / self._quantos)
+    
+    
