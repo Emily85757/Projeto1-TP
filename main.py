@@ -4,8 +4,6 @@ from som import Somatoria
 from prod import Produtorio
 from fibo import Fibonacci
 
-
-
 def principal():
     opcao = -1
     while opcao != 0:
