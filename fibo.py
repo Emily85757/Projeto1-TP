@@ -10,3 +10,6 @@ class Fibonacci:
             lista = lista + [proximo]   # concatenação em vez de append
             primeiro, segundo = segundo, proximo
         return lista
+
+
+
