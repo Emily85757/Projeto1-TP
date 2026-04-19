@@ -4,6 +4,8 @@ from som import Somatoria
 from prod import Produtorio
 from fibo import Fibonacci
 
+
+
 def principal():
     opcao = -1
     while opcao != 0:
@@ -19,7 +21,7 @@ def principal():
         try:
             opcao = int(input("\nDigite a opção que deseja: "))
         except ValueError:
-            print("Opção inválida: digite um número inteiro.")
+            print("Opção inválida.")
             input("\nTecle [Enter] para retornar ao seletor\n")
             continue
 
