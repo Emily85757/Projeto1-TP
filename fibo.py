@@ -1,20 +1,12 @@
 class Fibonacci:
-    
-    def __init__(self, numero : int):
+    def __init__(self, numero: int):
         self._N = numero
-      
-      
-    #16/04/26 - relatar fibonacci, horarios  
+
     def fibonacci(self) -> list[int]:
-        listaString = ['1']
-        primeiro = 1
-        segundo = 1
-        proximo = 1
-        for contagem in range (1, self._N, 1):
-            listaString += f", {proximo}"
-            primeiro = segundo
-            segundo = proximo
+        lista = [1, 1] if self._N > 1 else [1]
+        primeiro, segundo = 1, 1
+        for _ in range(2, self._N):
             proximo = primeiro + segundo
-        listaInteiro = list(map(int, listaString))
-        return listaInteiro
-        
+            lista = lista + [proximo]   # concatenação em vez de append
+            primeiro, segundo = segundo, proximo
+        return lista
